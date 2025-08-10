@@ -1,0 +1,75 @@
+# .gitignore for Alt:V server project - Only show scripts/resources
+# Ignore everything by default
+/*
+
+# But allow these essential script folders and files
+!resources/
+resources/*/stream/
+resources/*/stream.toml
+
+# Allow script files in resources
+!resources/**/client/
+!resources/**/server/
+!resources/**/shared/
+
+# Allow configuration files for resources
+!resources/**/package.json
+!resources/**/resource.toml
+!resources/**/README.md
+!resources/**/tsconfig.json
+!resources/**/tsconfig.eslint.json
+
+# Allow HTML/CSS files for client UIs
+!resources/**/html/
+!resources/**/src/
+!resources/**/src-server/
+
+# Allow project files for C# resources
+!resources/**/*.sln
+!resources/**/*.csproj
+
+# Allow essential project files
+!.gitignore
+!README.md
+!LICENSE.md
+
+# Create example config instead of real one
+!server.example.toml
+
+# Explicitly ignore sensitive files
+server.toml
+altv-server.exe
+altv-crash-handler.exe
+AltV.Net.Host.dll
+AltV.Net.Host.runtimeconfig.json
+data/
+modules/
+cache/
+
+# Ignore build outputs and temp files
+node_modules/
+dist/
+build/
+bin/
+obj/
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore IDE and OS files
+.vscode/
+.idea/
+*.code-workspace
+*.DS_Store
+Thumbs.db
+*.~
+
+# Ignore environment files
+.env
+.env.*
